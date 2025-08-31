@@ -1,17 +1,19 @@
 <script setup>
 import { RouterLink } from 'vue-router';
+import ClinicLogo from '../icons/Clinic logo.vue';
+
 
 
 </script>
 <template>
   <div>
-    <div class="flex justify-between bg-purple-500">
+    <div class="flex justify-between bg-purple-400">
       <div class="text-sm font-bold mx-15">10.00 - 21.00 : EVERYDAY | 091-234-5678</div>
     </div>
 
-    <div class="navbar bg-purple-100 shadow-sm">
+    <div class="navbar bg-purple-100 shadow-sm ">
       <div class="navbar-start">
-        <a class="btn btn-ghost text-xl mx-10"> logo clinic</a>
+        <ClinicLogo></ClinicLogo>
       </div>
       <div class="navbar-end hidden lg:flex mx-10">
         <ul class="menu menu-horizontal px-1">
@@ -22,21 +24,21 @@ import { RouterLink } from 'vue-router';
             <details>
               <summary>บริการทันตกรรม</summary>
               <ul class="p-2">
-                <li><a>จัดฟัน</a></li>
-                <li><a>ขูดหินปูน</a></li>
-                <li><a>อุดฟัน</a></li>
-                <li><a>ฟันปลอม</a></li>
-                <li><a>ถอนฟัน ผ่าฟันคุด</a></li>
-                <li><a>รักษารากฟัน</a></li>
+                <li><RouterLink :to="{name:'orthodontics'}">จัดฟัน</RouterLink></li>
+                <li><RouterLink :to="{name:'cleaning'}">ขูดหินปูน</RouterLink></li>
+                <li><RouterLink :to="{name:'dentalfilling'}">อุดฟัน</RouterLink></li>
+                <li><RouterLink :to="{name:'denture'}">ฟันปลอม</RouterLink></li>
+                <li><RouterLink :to="{name:'wisdom'}">ถอนฟัน ผ่าฟันคุด</RouterLink></li>
+                <li><RouterLink :to="{name:'rootcanal'}">รักษารากฟัน</RouterLink></li>
               </ul>
             </details>
           </li>
-          <li><a>ติดต่อเรา</a></li>
+          <li><RouterLink :to="{name: 'contactus'}">ติดต่อเรา</RouterLink></li>
         </ul>
       </div>
     </div>
   </div>
-
+ <!--Slot -->
   <slot></slot>
 
 
