@@ -12,11 +12,12 @@ import ClinicLogo from '../icons/Clinic logo.vue';
     </div>
 
     <div class="navbar bg-purple-100 shadow-sm ">
-      <div class="navbar-start">
+      <div class="navbar-start mx-10">
         <ClinicLogo></ClinicLogo>
+        <div></div>
       </div>
-      <div class="navbar-end hidden lg:flex mx-10">
-        <ul class="menu menu-horizontal px-1">
+      <div class="navbar-end hidden lg:flex mx-10 ">
+        <ul class="menu menu-horizontal px-1 text-lg font-semibold">
           <li><RouterLink :to="{ name: 'home'}">หน้าแรก</RouterLink></li>
           <li><RouterLink :to="{name: 'appointment'}">ทำนัดหมาย</RouterLink></li>
           <li><RouterLink :to="{name: 'pricing'}">ค่ารักษา</RouterLink></li>
